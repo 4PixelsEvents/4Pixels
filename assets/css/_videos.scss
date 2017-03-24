@@ -1,0 +1,21 @@
+.videos{
+  .videoWrapper{
+    padding-top: 50px;
+    width: 100%;
+    .videoBox{
+      float:left;
+      min-height: 250px;
+    }
+    .video{
+      width: 100%;
+      height: auto;
+      background: map-get($color, white);
+      box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    }
+    .content{
+      padding: 25px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+}
