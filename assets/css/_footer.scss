@@ -1,0 +1,21 @@
+footer{
+  float:left;
+  width: 100%;
+  background:map-get($color, darkGrey);
+  .wrap{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:map-get($color, white);
+    span.logo{
+      font-weight: 700;
+      font-size: 20px;
+    }
+    span.contact{
+      font-weight: 300;
+      font-size: 16px;
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.stories{
+  margin-top: 100px;
+  background: map-get($color, backgroundDark);
+  padding-bottom: 100px;
+  h2{
+    padding: 70px 12.5px;
+  }
+  .storiesWrapper{
+    width: 100%;
+  }
+  .story{
+    float:left;
+    margin-bottom: 50px;
+    .content{
+      position: relative;
+      padding:30px;
+      background: map-get($color, white);
+      width: 100%;
+      height: 580px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.25);
+      overflow: hidden;
+      h2{
+        padding:0;
+        font-size: 33px;
+        font-weight: 500;
+      }
+      p{
+        margin-top: 25px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .overlay{
+        position: absolute;
+        bottom: 116px;
+        left: 0;
+        width: 100%;
+        height: 290px;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+      }
+      .action{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        background: map-get($color, white);
+        height: 116px;
+        a{
+          width: 100%;
+          text-align: center;
+          color:map-get($color, white);
+          background: map-get($color, color1);
+          font-weight: 500;
+          font-size: 18px;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

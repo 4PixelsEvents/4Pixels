@@ -1,0 +1,186 @@
+header{
+  position: relative;
+  width: 100%;
+  height: map-get($advanced, headerHeight);
+  background: map-get($color, placeholder);
+  color: map-get($color, white);
+  overflow: hidden;
+  .bgColor{
+    position: absolute;
+    left:0;
+    top:0;
+    width:calc(50% - (#{map-get($advanced, headerBlock)} * 2));
+    height: 100%;
+    background: map-get($color, color1);
+    z-index: 1;
+    &::after{
+      content: "";
+      right: -160px;
+      width: 160px;
+      height:100%;
+      position:absolute;
+      background:url("../img/headerBlocks.png");
+      background-size: cover;
+    }
+  }
+  a{
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    padding: 17px 20px;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    background: map-get($color, colo1);
+    color: map-get($color, white);
+    &.ghost{
+      background: none;
+      border:2px solid map-get($color, color1);
+      font-weight: 300;
+      padding: 15px 20px;
+    }
+  }
+  .bgImage{
+    position: absolute;
+    right: 0;
+    top:0;
+    width:calc(50% + (#{map-get($advanced, headerBlock)} * 2));
+    height: 100%;
+    background: map-get($color, color1);
+    z-index: 0;
+    &::before{
+      content: "";
+      left: 645px;
+      width: 255px;
+      height: 100%;
+      position: absolute;
+      background: url("../img/headerBlocksRight.png");
+      background-size: cover;
+      z-index: 10;
+    }
+    .headerImage{
+      width: 810px;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      .overlayLoader{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: map-get($color, color2);
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        &.loader{
+          opacity: 1;
+        }
+      }
+    }
+    img{
+      height: 100%;
+    }
+  }
+  .headerContent{
+    width: 100%;
+    max-width: 501px;
+    padding-right: 25px;
+    transition: all 0.3s ease;
+    padding-top: 40px;
+  }
+  .wrap{
+    position: relative;
+    z-index: 2;
+    h1{
+      position: relative;
+      left:-5px;
+      &.smaller{
+        font-size: 51px;
+        line-height: 53px;
+      }
+    }
+    h2{
+      margin: 15px -3px;
+      a{
+        width: auto;
+        display: inline;
+        text-align: left;
+        padding: 0;
+        border-radius: 0;
+        font-size: inherit;
+        font-weight: 300;
+      }
+    }
+    h3{
+      margin-bottom: 5px;
+    }
+    .actions{
+      padding-top: 20px;
+      a{
+        background: map-get($color, white);
+        color: map-get($color, color1);
+        &.ghost{
+          color: map-get($color, white);
+          border: 2px solid map-get($color, white);
+          background: none;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .menu{
+    position: relative;
+    z-index: 2;
+    height: 75px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .logo{
+    font-weight: 700;
+    font-size: 20px;
+    color: map-get($color, white);
+  }
+
+  .circular {
+    animation: rotate 2s linear infinite;
+    height: 120px;
+    transform-origin: center center;
+    width: 120px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+    stroke:map-get($color, white);
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -35px;
+    }
+    100% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -124px;
+    }
+  }
+}

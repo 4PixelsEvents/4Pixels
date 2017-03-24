@@ -1,0 +1,70 @@
+.slider{
+  position: relative;
+  z-index: 1;
+  height: 510px;
+  .innerSlider{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: -65px;
+    height: 550px;
+  }
+  .wrap{
+    max-width: 1250px;
+  }
+  .eventSlider{
+    overflow: inherit;
+    .event{
+      padding: 0 0 0 25px;
+      top: 0;
+      transition: all 0.3s ease;
+      width: 360px;
+      margin-top: 95px;
+      &:focus{
+        outline:none;
+      }
+      &.slick-active{
+        position: relative;
+        padding: 0 0 0 25px;
+        margin: 0;
+        .card{
+          height: 515px;
+        }
+      }
+      .card{
+        position: relative;
+        background:map-get($color, placeholder);
+        width: 100%;
+        height:450px;
+        border:5px solid map-get($color, white);
+        box-shadow: 0 0 10px rgba(0,0,0,0.25);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        .title{
+          position: absolute;
+          z-index: 3;
+          top: 0;
+          font-size: 30px;
+          line-height: 25px;
+          text-transform: uppercase;
+          color: map-get($color, white);
+          font-weight: 500;
+          width: 100%;
+          padding: 25px;
+        }
+      }
+      .eventOverlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.29) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.29) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0.29) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+    }
+  }
+  .slick-list{
+    background: none;
+    overflow: inherit;
+  }
+}
