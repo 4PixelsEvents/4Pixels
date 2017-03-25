@@ -1,20 +1,15 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
-			</footer>
-			<!-- /footer -->
-
-		</div>
-		<!-- /wrapper -->
+		<footer>
+			<div class="wrap">
+				<span class="col50 logo">4 Pixels © 2017</span>
+				<span class="col50 contact">Email: info@4pixels.events</span>
+			</div>
+		</footer>
 
 		<?php wp_footer(); ?>
+
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jQuery.js"></script>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/js/headerSlider.js"></script>
 
 		<!-- analytics -->
 		<script>
